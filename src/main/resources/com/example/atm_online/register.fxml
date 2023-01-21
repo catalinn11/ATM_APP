@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atm_online.RegisterController">
+    <children>
+        <Pane fx:id="titleBar" layoutX="-1.0" layoutY="-1.0" prefHeight="42.0" prefWidth="800.0" styleClass="TitlePane" stylesheets="@../../../style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <Pane layoutY="5.0" prefHeight="34.0" prefWidth="107.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="-2.0">
+            <children>
+                <ImageView fx:id="minImage" fitHeight="30.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/min.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="expImage" fitHeight="30.0" layoutX="38.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/expand.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="closeImage" fitHeight="30.0" layoutX="77.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/close.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="42.0" prefHeight="138.0" prefWidth="740.0" styleClass="welcomeText" stylesheets="@../../../style.css" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <font>
+                <Font name="System Italic" size="35.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER" layoutX="79.0" layoutY="42.0" maxHeight="1000.0" maxWidth="1020.0" prefHeight="138.0" prefWidth="682.0" spacing="50.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="130.0" prefWidth="439.0" text="Create your account" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="40.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="bankicon" fitHeight="119.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </HBox>
+        <Label fx:id="loginMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="194.0" prefHeight="27.0" prefWidth="371.0" textAlignment="CENTER" textFill="#c30000">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+      <ImageView fx:id="registerUser" fitHeight="130.0" fitWidth="132.0" layoutX="335.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="firstname" alignment="CENTER" layoutX="100.0" layoutY="285.0" promptText="firstname" style="-fx-background-radius: 25;" AnchorPane.leftAnchor="100.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lastname" alignment="CENTER" layoutX="101.0" layoutY="415.0" promptText="lastname" style="-fx-background-radius: 25;" AnchorPane.leftAnchor="101.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text layoutX="127.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRSTNAME" wrappingWidth="118.0" AnchorPane.leftAnchor="127.0">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="136.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LASTNAME" wrappingWidth="118.0" AnchorPane.leftAnchor="136.0">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="560.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USERNAME" wrappingWidth="118.0" AnchorPane.rightAnchor="122.0">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <TextField fx:id="user" alignment="CENTER" layoutX="533.0" layoutY="285.0" promptText="username" style="-fx-background-radius: 25;" AnchorPane.rightAnchor="100.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="pass" alignment="CENTER" layoutX="527.0" layoutY="415.0" promptText="password" style="-fx-background-radius: 25;" AnchorPane.rightAnchor="99.4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <Text layoutX="560.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD" wrappingWidth="118.0" AnchorPane.rightAnchor="122.39999999999998">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Button fx:id="createAccount" alignment="CENTER" contentDisplay="CENTER" layoutX="326.0" layoutY="476.0" mnemonicParsing="false" onAction="#createAccountButtonHandle" prefHeight="53.0" prefWidth="149.0" styleClass="createAccount" stylesheets="@../../../style.css" text="Create account" textFill="WHITE" AnchorPane.leftAnchor="326.0" AnchorPane.rightAnchor="324.4" AnchorPane.topAnchor="476.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="registerMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="201.0" layoutY="187.0" prefHeight="42.0" prefWidth="399.0" textFill="#800a0a">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" layoutX="357.0" layoutY="383.0" prefHeight="64.0" prefWidth="62.0" AnchorPane.leftAnchor="357.0" AnchorPane.rightAnchor="357.4">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GENDER" wrappingWidth="85.199951171875">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="genderChoice" prefHeight="25.0" prefWidth="67.0" style="-fx-background-radius: 25;" />
+         </children>
+      </VBox>
+      <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" layoutX="366.0" layoutY="549.0" mnemonicParsing="false" onAction="#backButtonHandle" prefHeight="27.0" prefWidth="67.0" styleClass="backButton" text="BACK" textFill="WHITE" AnchorPane.leftAnchor="366.0" AnchorPane.rightAnchor="367.0" AnchorPane.topAnchor="549.0" />
+    </children>
+</AnchorPane>
